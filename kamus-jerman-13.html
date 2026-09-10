@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-title" content="Vokabelkasten" />
+<meta name="theme-color" content="#F6F2E7" />
+<title>Vokabelkasten</title>
+<link rel="apple-touch-icon" href="data:image/png;base64,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" />
+<link rel="icon" type="image/png" href="data:image/png;base64,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" />
+
+<style>
+  :root{
+    --paper:#F6F2E7; --ink:#2A2620; --ink-soft:#6B6459; --line:#D8D0BC; --card:#FFFDF7;
+    --der-bg:#2F4E8C; --der-fg:#EAF0FF;
+    --die-bg:#B23A34; --die-fg:#FFEFEC;
+    --das-bg:#3E7A55; --das-fg:#EAFBEF;
+    --none-bg:#6B6459; --none-fg:#F5F1E8;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);
+    font-family:'Helvetica Neue',Arial,sans-serif; -webkit-tap-highlight-color:transparent;}
+  #app{min-height:100dvh;display:flex;flex-direction:column;}
+  header{padding:20px 18px 12px;display:flex;justify-content:space-between;align-items:flex-end;
+    border-bottom:1px solid var(--line);}
+  .eyebrow{font-size:10.5px;letter-spacing:.14em;color:#8C6A3F;font-weight:700;margin-bottom:2px;}
+  h1{font-family:Georgia,'Times New Roman',serif;font-size:24px;font-weight:700;margin:0;letter-spacing:-.01em;}
+  .header-meta{font-size:11.5px;color:var(--ink-soft);text-align:right;line-height:1.5;}
+  nav.tabbar{display:flex;gap:6px;padding:10px 14px;background:#EFE9D8;border-bottom:1px solid var(--line);
+    position:sticky;top:0;z-index:5;}
+  .tabbtn{display:flex;align-items:center;gap:6px;padding:9px 14px;border-radius:8px 8px 0 0;border:none;
+    background:transparent;color:var(--ink-soft);font-size:13.5px;font-weight:600;cursor:pointer;}
+  .tabbtn.active{background:var(--card);color:var(--ink);box-shadow:0 -1px 0 0 var(--der-bg) inset;}
+  main{flex:1;padding:16px 14px 48px;max-width:720px;width:100%;margin:0 auto;}
+  .hidden{display:none !important;}
+
+  input,select{padding:10px 12px;border-radius:8px;border:1px solid var(--line);background:var(--card);
+    font-size:14px;color:var(--ink);width:100%;font-family:inherit;}
+  input:focus,select:focus,button:focus-visible{outline:2px solid var(--der-bg);outline-offset:2px;}
+
+  .btn{display:inline-flex;align-items:center;gap:6px;padding:9px 13px;border-radius:8px;border:none;
+    font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;font-family:inherit;}
+  .btn-primary{background:var(--der-bg);color:var(--der-fg);}
+  .btn-warn{background:#B23A34;color:#FFEFEC;}
+  .btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--line);font-weight:600;}
+  .icon-btn{padding:7px;border-radius:7px;border:1px solid var(--line);background:var(--card);
+    color:var(--ink-soft);cursor:pointer;display:inline-flex;}
+  .icon-btn-danger{padding:7px;border-radius:7px;border:1px solid #E3B4AF;background:#FBEDEB;
+    color:#B23A34;cursor:pointer;display:inline-flex;}
+
+  .tag{font-size:10.5px;font-weight:800;padding:3px 7px;border-radius:5px;letter-spacing:.02em;flex-shrink:0;}
+  .tag-der{background:var(--der-bg);color:var(--der-fg);}
+  .tag-die{background:var(--die-bg);color:var(--die-fg);}
+  .tag-das{background:var(--das-bg);color:var(--das-fg);}
+  .tag-none{background:var(--none-bg);color:var(--none-fg);}
+  .tag-verb{background:#8C6A3F;color:#FBF1DE;}
+  .tag-guess{outline:1.5px dashed currentColor; outline-offset:1px;}
+
+  /* Kamus */
+  #kamus-wrap{display:flex;flex-direction:column;gap:14px;}
+  .cat-section{border:1px solid var(--line);border-radius:10px;background:var(--card);overflow:hidden;}
+  .cat-header{width:100%;display:flex;justify-content:space-between;align-items:center;padding:12px 14px;
+    background:transparent;border:none;cursor:pointer;color:var(--ink);}
+  .cat-header-left{display:flex;align-items:center;gap:8px;}
+  .chev{transition:transform .12s ease;display:inline-block;}
+  .chev.closed{transform:rotate(-90deg);}
+  .cat-name{font-family:Georgia,'Times New Roman',serif;font-size:16px;font-weight:700;}
+  .cat-count{font-size:11.5px;color:var(--ink-soft);background:#EFE9D8;border-radius:999px;padding:2px 8px;}
+  .word-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;padding:0 12px 12px;}
+  .word-card{display:flex;gap:8px;align-items:center;padding:8px 10px;border-radius:8px;border:1px solid var(--line);background:#FCFAF2;cursor:pointer;text-align:left;font-family:inherit;width:100%;}
+  .word-card:active{background:#F5EFDD;}
+
+  /* Modal detail kata */
+  .modal-overlay{position:fixed;inset:0;background:rgba(42,38,32,.45);display:flex;align-items:flex-end;justify-content:center;z-index:20;}
+  .modal-overlay.hidden{display:none !important;}
+  .modal-sheet{background:var(--card);border-radius:16px 16px 0 0;padding:18px 18px 26px;width:100%;max-width:480px;max-height:82dvh;overflow-y:auto;}
+  .modal-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:4px;}
+  .modal-word{font-family:Georgia,'Times New Roman',serif;font-size:22px;font-weight:700;}
+  .modal-arti{font-size:13.5px;color:var(--ink-soft);margin-bottom:4px;}
+  .modal-jamak{font-size:12.5px;color:var(--ink-soft);margin-bottom:14px;}
+  .modal-jamak b{color:var(--ink);}
+  .deklinasi-table{width:100%;border-collapse:collapse;font-size:12.5px;}
+  .deklinasi-table th,.deklinasi-table td{padding:7px 6px;border-bottom:1px solid var(--line);text-align:left;}
+  .deklinasi-table th{color:var(--ink-soft);font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.03em;}
+  .deklinasi-note{font-size:10.5px;color:var(--ink-soft);font-style:italic;margin-top:10px;}
+  @media (min-width:560px){ .modal-overlay{align-items:center;} .modal-sheet{border-radius:16px;} }
+  .word-de{font-size:14px;font-weight:700;color:var(--ink);overflow-wrap:anywhere;}
+  .word-id{font-size:12px;color:var(--ink-soft);overflow-wrap:anywhere;}
+  .empty-state{text-align:center;padding:40px 18px;color:var(--ink-soft);border:1px dashed var(--line);border-radius:10px;font-size:13.5px;}
+
+  /* Menu Lawan/Sinonim */
+  #sinonim-wrap{display:flex;flex-direction:column;gap:14px;}
+  .subtab-bar{display:flex;gap:6px;}
+  .subtab-btn{flex:1;padding:9px 10px;border-radius:8px;border:1.5px solid var(--line);background:var(--card);
+    color:var(--ink);font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;}
+  .subtab-btn.active{background:var(--ink);color:var(--card);border-color:var(--ink);}
+  .sinonim-card{border:1px solid var(--line);border-radius:10px;background:var(--card);padding:10px 12px;margin-bottom:8px;}
+  .sinonim-card-head{display:flex;align-items:center;gap:8px;margin-bottom:4px;}
+  .sinonim-card-head .word-de{font-size:15px;}
+  .sinonim-card-cat{font-size:11px;color:var(--ink-soft);margin-left:auto;background:#EFE9D8;border-radius:999px;padding:2px 8px;}
+  .sinonim-line{font-size:13px;color:var(--ink);margin-top:2px;}
+  .sinonim-pick-list{display:flex;flex-direction:column;gap:6px;max-height:260px;overflow-y:auto;padding:2px;}
+  .sinonim-pick-btn{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:8px;
+    border:1px solid var(--line);background:var(--card);color:var(--ink);font-size:13.5px;font-weight:600;
+    cursor:pointer;text-align:left;font-family:inherit;}
+  .sinonim-pick-btn.active{border-color:var(--der-bg);box-shadow:0 0 0 1px var(--der-bg);}
+  .sinonim-edit-box{display:flex;flex-direction:column;gap:8px;padding:12px;border-radius:10px;
+    border:1px solid var(--line);background:#FCFAF2;margin-top:10px;}
+  .sinonim-edit-title{font-family:Georgia,'Times New Roman',serif;font-size:16px;font-weight:700;}
+  .empty-row{font-size:13px;color:var(--ink-soft);padding:8px 4px;}
+
+  /* Kelola */
+  #kelola-wrap{display:flex;flex-direction:column;gap:24px;}
+  .section-title{font-family:Georgia,'Times New Roman',serif;font-size:15.5px;font-weight:700;margin:0 0 10px;}
+  .cat-list{display:flex;flex-direction:column;gap:6px;}
+  .cat-list-row{display:flex;align-items:center;gap:6px;}
+  .cat-list-btn{flex:1;display:flex;justify-content:space-between;align-items:center;padding:9px 12px;
+    border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink);font-size:13.5px;
+    font-weight:600;cursor:pointer;text-align:left;font-family:inherit;}
+  .cat-list-btn.active{border-color:var(--der-bg);box-shadow:0 0 0 1px var(--der-bg);}
+  .cat-list-count{font-size:11px;color:var(--ink-soft);font-weight:500;}
+  .new-cat-row{display:flex;gap:6px;margin-top:8px;}
+  .word-form{display:flex;flex-direction:column;gap:8px;padding:12px;border-radius:10px;border:1px solid var(--line);background:#FCFAF2;margin-bottom:12px;}
+  .artikel-picker{display:flex;gap:6px;flex-wrap:wrap;align-items:center;}
+  .artikel-pick-btn{padding:6px 11px;border-radius:7px;border:1.5px solid;font-size:12.5px;font-weight:700;cursor:pointer;background:transparent;color:var(--ink);font-family:inherit;}
+  .jenis-picker{display:flex;gap:6px;flex-wrap:wrap;}
+  .jenis-btn{padding:7px 13px;border-radius:7px;border:1.5px solid var(--line);font-size:12.5px;font-weight:700;
+    cursor:pointer;background:transparent;color:var(--ink);font-family:inherit;}
+  .jenis-btn.active{background:var(--ink);color:var(--card);border-color:var(--ink);}
+  .field-hint{font-size:11px;color:var(--ink-soft);margin:-2px 0 2px;}
+  .guess-note{font-size:11px;color:var(--ink-soft);font-style:italic;}
+  .field-row{display:flex;gap:6px;align-items:center;}
+  .field-row input{flex:1;}
+  .translate-btn{flex-shrink:0;padding:9px 10px;border-radius:8px;border:1px solid var(--line);background:var(--card);cursor:pointer;font-size:13px;}
+  .warning-box{display:flex;flex-direction:column;gap:8px;padding:10px 12px;border-radius:8px;background:#FBEDEB;border:1px solid #E3B4AF;color:#7A2A25;font-size:13px;}
+  .warning-actions{display:flex;gap:8px;}
+  .word-form-actions{display:flex;gap:8px;margin-top:2px;}
+  .manage-word-row{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:8px;border:1px solid var(--line);background:var(--card);margin-bottom:6px;}
+  .manage-word-body{flex:1;min-width:0;}
+  .manage-word-actions{display:flex;gap:6px;}
+
+  /* Flashcard */
+  #flash-wrap{display:flex;flex-direction:column;align-items:center;gap:16px;}
+  .flash-controls{display:flex;gap:8px;width:100%;justify-content:space-between;flex-wrap:wrap;}
+  .flash-counter{font-size:12.5px;color:var(--ink-soft);}
+  .flash-stage{width:100%;max-width:320px;height:220px;perspective:1200px;cursor:pointer;}
+  .flash-card{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .4s cubic-bezier(.4,.2,.2,1);}
+  .flash-card.flipped{transform:rotateY(180deg);}
+  .flash-face{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    gap:10px;border-radius:14px;border:1px solid var(--line);background:var(--card);backface-visibility:hidden;
+    box-shadow:0 3px 0 0 #E6DFC8,0 8px 18px -6px rgba(42,38,32,.25);padding:20px;text-align:center;}
+  .flash-face-back{transform:rotateY(180deg);background:#EFE9D8;}
+  .flash-word{font-family:Georgia,'Times New Roman',serif;font-size:26px;font-weight:700;word-break:break-word;}
+  .flash-hint{font-size:11px;color:var(--ink-soft);}
+  .flash-nav{display:flex;gap:10px;}
+  .nav-btn{padding:10px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;display:inline-flex;}
+  .confirm-row{display:flex;gap:4px;}
+</style>
+</head>
+<body>
+<div id="app">
+  <header>
+    <div>
+      <div class="eyebrow">KARTEIKASTEN · DEUTSCH</div>
+      <h1>Vokabelkasten</h1>
+    </div>
+    <div class="header-meta" id="header-meta">0 kata</div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tabbtn active" data-tab="kamus">📖 Kamus</button>
+    <button class="tabbtn" data-tab="kelola">⚙️ Kelola</button>
+    <button class="tabbtn" data-tab="sinonim">🔁 Lawan/Sinonim</button>
+    <button class="tabbtn" data-tab="flashcard">🗂️ Flashcard</button>
+  </nav>
+
+  <main>
+    <section id="kamus-wrap"></section>
+    <section id="kelola-wrap" class="hidden"></section>
+    <section id="sinonim-wrap" class="hidden"></section>
+    <section id="flash-wrap" class="hidden"></section>
+  </main>
+  <div id="word-modal-overlay" class="modal-overlay hidden"></div>
+</div>
+
+<script>
+const STORAGE_KEY = "vokabel-data-v1";
+
+const ARTIKEL = {
+  der: {cls:"tag-der", label:"der"},
+  die: {cls:"tag-die", label:"die"},
+  das: {cls:"tag-das", label:"das"},
+  "":  {cls:"tag-none", label:"—"},
+};
+
+const SEED = {
+  categories: [
+    {id:"cat-lebensmittel", name:"Lebensmittel", words:[
+      {id:"w1", artikel:"das", wort:"Brot", arti:"roti", jamak:"Brote"},
+      {id:"w2", artikel:"der", wort:"Käse", arti:"keju", jamak:"Käse"},
+      {id:"w3", artikel:"die", wort:"Wurst", arti:"sosis", jamak:"Würste"},
+      {id:"w4", artikel:"der", wort:"Apfel", arti:"apel", jamak:"Äpfel"},
+      {id:"w5", artikel:"das", wort:"Ei", arti:"telur", jamak:"Eier"},
+    ]},
+    {id:"cat-getranke", name:"Getränke", words:[
+      {id:"w6", artikel:"das", wort:"Wasser", arti:"air", jamak:"Wasser"},
+      {id:"w7", artikel:"der", wort:"Kaffee", arti:"kopi", jamak:"Kaffees"},
+      {id:"w8", artikel:"der", wort:"Tee", arti:"teh", jamak:"Tees"},
+      {id:"w9", artikel:"der", wort:"Saft", arti:"jus", jamak:"Säfte"},
+    ]},
+    {id:"cat-verben", name:"Verben", words:[
+      {id:"w10", artikel:"", wort:"wohnen", arti:"tinggal (di suatu tempat)", jamak:"", jenis:"verb", lawan:"", sinonim:"leben"},
+      {id:"w11", artikel:"", wort:"trinken", arti:"minum", jamak:"", jenis:"verb", lawan:"", sinonim:""},
+      {id:"w12", artikel:"", wort:"essen", arti:"makan", jamak:"", jenis:"verb", lawan:"", sinonim:""},
+    ]},
+  ]
+};
+
+function uid(p){ return p+"-"+Date.now()+"-"+Math.random().toString(36).slice(2,8); }
+function esc(s){ return String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])); }
+function sortWords(words){ return [...words].sort((a,b)=>a.wort.localeCompare(b.wort,"de")); }
+function norm(s){ return String(s||"").trim().toLowerCase(); }
+
+/* ---- Kamus internal kata umum: artikel & jamak yang sudah pasti benar (dicek duluan sebelum menebak) ---- */
+const KNOWN_NOMEN = {
+  schinken:{artikel:"der",jamak:"Schinken"}, zucker:{artikel:"der",jamak:""}, reis:{artikel:"der",jamak:""},
+  honig:{artikel:"der",jamak:""}, essig:{artikel:"der",jamak:""}, joghurt:{artikel:"der",jamak:"Joghurts"},
+  zimt:{artikel:"der",jamak:""}, knoblauch:{artikel:"der",jamak:""}, fisch:{artikel:"der",jamak:"Fische"},
+  salat:{artikel:"der",jamak:"Salate"}, kuchen:{artikel:"der",jamak:"Kuchen"}, pfeffer:{artikel:"der",jamak:""},
+  wein:{artikel:"der",jamak:"Weine"}, sekt:{artikel:"der",jamak:"Sekte"},
+  milch:{artikel:"die",jamak:""}, butter:{artikel:"die",jamak:""}, kartoffel:{artikel:"die",jamak:"Kartoffeln"},
+  tomate:{artikel:"die",jamak:"Tomaten"}, zwiebel:{artikel:"die",jamak:"Zwiebeln"}, suppe:{artikel:"die",jamak:"Suppen"},
+  nudel:{artikel:"die",jamak:"Nudeln"},
+  salz:{artikel:"das",jamak:"Salze"}, öl:{artikel:"das",jamak:"Öle"}, gemüse:{artikel:"das",jamak:"Gemüse"},
+  obst:{artikel:"das",jamak:""}, fleisch:{artikel:"das",jamak:""}, hähnchen:{artikel:"das",jamak:"Hähnchen"},
+  brötchen:{artikel:"das",jamak:"Brötchen"}, bier:{artikel:"das",jamak:"Biere"},
+  haus:{artikel:"das",jamak:"Häuser"}, wohnung:{artikel:"die",jamak:"Wohnungen"}, zimmer:{artikel:"das",jamak:"Zimmer"},
+  küche:{artikel:"die",jamak:"Küchen"}, bad:{artikel:"das",jamak:"Bäder"}, balkon:{artikel:"der",jamak:"Balkone"},
+  garten:{artikel:"der",jamak:"Gärten"}, tür:{artikel:"die",jamak:"Türen"}, fenster:{artikel:"das",jamak:"Fenster"},
+  tisch:{artikel:"der",jamak:"Tische"}, stuhl:{artikel:"der",jamak:"Stühle"}, bett:{artikel:"das",jamak:"Betten"},
+  schrank:{artikel:"der",jamak:"Schränke"}, lampe:{artikel:"die",jamak:"Lampen"}, teppich:{artikel:"der",jamak:"Teppiche"},
+  spiegel:{artikel:"der",jamak:"Spiegel"}, sofa:{artikel:"das",jamak:"Sofas"}, regal:{artikel:"das",jamak:"Regale"},
+  familie:{artikel:"die",jamak:"Familien"}, mutter:{artikel:"die",jamak:"Mütter"}, vater:{artikel:"der",jamak:"Väter"},
+  schwester:{artikel:"die",jamak:"Schwestern"}, bruder:{artikel:"der",jamak:"Brüder"}, tochter:{artikel:"die",jamak:"Töchter"},
+  sohn:{artikel:"der",jamak:"Söhne"}, tante:{artikel:"die",jamak:"Tanten"}, onkel:{artikel:"der",jamak:"Onkel"},
+  cousine:{artikel:"die",jamak:"Cousinen"}, cousin:{artikel:"der",jamak:"Cousins"}, kind:{artikel:"das",jamak:"Kinder"},
+  mann:{artikel:"der",jamak:"Männer"}, frau:{artikel:"die",jamak:"Frauen"}, baby:{artikel:"das",jamak:"Babys"},
+  hose:{artikel:"die",jamak:"Hosen"}, hemd:{artikel:"das",jamak:"Hemden"}, rock:{artikel:"der",jamak:"Röcke"},
+  kleid:{artikel:"das",jamak:"Kleider"}, jacke:{artikel:"die",jamak:"Jacken"}, mantel:{artikel:"der",jamak:"Mäntel"},
+  schuh:{artikel:"der",jamak:"Schuhe"}, socke:{artikel:"die",jamak:"Socken"}, hut:{artikel:"der",jamak:"Hüte"},
+  mütze:{artikel:"die",jamak:"Mützen"}, handschuh:{artikel:"der",jamak:"Handschuhe"}, gürtel:{artikel:"der",jamak:"Gürtel"},
+  krawatte:{artikel:"die",jamak:"Krawatten"},
+  kopf:{artikel:"der",jamak:"Köpfe"}, auge:{artikel:"das",jamak:"Augen"}, nase:{artikel:"die",jamak:"Nasen"},
+  mund:{artikel:"der",jamak:"Münder"}, ohr:{artikel:"das",jamak:"Ohren"}, arm:{artikel:"der",jamak:"Arme"},
+  hand:{artikel:"die",jamak:"Hände"}, bein:{artikel:"das",jamak:"Beine"}, fuß:{artikel:"der",jamak:"Füße"},
+  bauch:{artikel:"der",jamak:"Bäuche"}, rücken:{artikel:"der",jamak:"Rücken"}, haar:{artikel:"das",jamak:"Haare"},
+  finger:{artikel:"der",jamak:"Finger"}, herz:{artikel:"das",jamak:"Herzen"},
+  hund:{artikel:"der",jamak:"Hunde"}, katze:{artikel:"die",jamak:"Katzen"}, pferd:{artikel:"das",jamak:"Pferde"},
+  kuh:{artikel:"die",jamak:"Kühe"}, schwein:{artikel:"das",jamak:"Schweine"}, vogel:{artikel:"der",jamak:"Vögel"},
+  maus:{artikel:"die",jamak:"Mäuse"}, baum:{artikel:"der",jamak:"Bäume"}, blume:{artikel:"die",jamak:"Blumen"},
+  gras:{artikel:"das",jamak:"Gräser"}, wald:{artikel:"der",jamak:"Wälder"}, berg:{artikel:"der",jamak:"Berge"},
+  fluss:{artikel:"der",jamak:"Flüsse"}, meer:{artikel:"das",jamak:"Meere"}, sonne:{artikel:"die",jamak:"Sonnen"},
+  mond:{artikel:"der",jamak:"Monde"}, stern:{artikel:"der",jamak:"Sterne"}, regen:{artikel:"der",jamak:"Regen"},
+  schnee:{artikel:"der",jamak:""}, wind:{artikel:"der",jamak:"Winde"}, wetter:{artikel:"das",jamak:""},
+  tag:{artikel:"der",jamak:"Tage"}, woche:{artikel:"die",jamak:"Wochen"}, monat:{artikel:"der",jamak:"Monate"},
+  jahr:{artikel:"das",jamak:"Jahre"}, stunde:{artikel:"die",jamak:"Stunden"}, minute:{artikel:"die",jamak:"Minuten"},
+  sekunde:{artikel:"die",jamak:"Sekunden"}, morgen:{artikel:"der",jamak:"Morgen"}, abend:{artikel:"der",jamak:"Abende"},
+  nacht:{artikel:"die",jamak:"Nächte"},
+  schule:{artikel:"die",jamak:"Schulen"}, lehrer:{artikel:"der",jamak:"Lehrer"}, lehrerin:{artikel:"die",jamak:"Lehrerinnen"},
+  schüler:{artikel:"der",jamak:"Schüler"}, buch:{artikel:"das",jamak:"Bücher"}, stift:{artikel:"der",jamak:"Stifte"},
+  heft:{artikel:"das",jamak:"Hefte"}, tasche:{artikel:"die",jamak:"Taschen"}, computer:{artikel:"der",jamak:"Computer"},
+  handy:{artikel:"das",jamak:"Handys"}, universität:{artikel:"die",jamak:"Universitäten"}, beruf:{artikel:"der",jamak:"Berufe"},
+  arbeit:{artikel:"die",jamak:"Arbeiten"}, büro:{artikel:"das",jamak:"Büros"}, arzt:{artikel:"der",jamak:"Ärzte"},
+  polizist:{artikel:"der",jamak:"Polizisten"},
+  stadt:{artikel:"die",jamak:"Städte"}, dorf:{artikel:"das",jamak:"Dörfer"}, straße:{artikel:"die",jamak:"Straßen"},
+  platz:{artikel:"der",jamak:"Plätze"}, park:{artikel:"der",jamak:"Parks"}, geschäft:{artikel:"das",jamak:"Geschäfte"},
+  markt:{artikel:"der",jamak:"Märkte"}, kirche:{artikel:"die",jamak:"Kirchen"}, museum:{artikel:"das",jamak:"Museen"},
+  bahnhof:{artikel:"der",jamak:"Bahnhöfe"}, auto:{artikel:"das",jamak:"Autos"}, bus:{artikel:"der",jamak:"Busse"},
+  zug:{artikel:"der",jamak:"Züge"}, fahrrad:{artikel:"das",jamak:"Fahrräder"}, flugzeug:{artikel:"das",jamak:"Flugzeuge"},
+  schiff:{artikel:"das",jamak:"Schiffe"},
+  zeit:{artikel:"die",jamak:"Zeiten"}, geld:{artikel:"das",jamak:"Gelder"}, liebe:{artikel:"die",jamak:""},
+  leben:{artikel:"das",jamak:"Leben"}, freundschaft:{artikel:"die",jamak:"Freundschaften"}, freund:{artikel:"der",jamak:"Freunde"},
+  freundin:{artikel:"die",jamak:"Freundinnen"}, idee:{artikel:"die",jamak:"Ideen"}, frage:{artikel:"die",jamak:"Fragen"},
+  antwort:{artikel:"die",jamak:"Antworten"}, problem:{artikel:"das",jamak:"Probleme"}, lösung:{artikel:"die",jamak:"Lösungen"},
+  nachricht:{artikel:"die",jamak:"Nachrichten"}, name:{artikel:"der",jamak:"Namen"}, sprache:{artikel:"die",jamak:"Sprachen"},
+  wort:{artikel:"das",jamak:"Wörter"}, satz:{artikel:"der",jamak:"Sätze"}, geschichte:{artikel:"die",jamak:"Geschichten"},
+  film:{artikel:"der",jamak:"Filme"}, musik:{artikel:"die",jamak:""}, lied:{artikel:"das",jamak:"Lieder"},
+  spiel:{artikel:"das",jamak:"Spiele"}, sport:{artikel:"der",jamak:""},
+  // Kata-kata "pengecualian" umum yang sering meleset kalau ditebak dari akhiran kata saja
+  moment:{artikel:"der",jamak:"Momente"}, zement:{artikel:"der",jamak:""}, talent:{artikel:"das",jamak:"Talente"},
+  prozent:{artikel:"das",jamak:"Prozente"}, euro:{artikel:"der",jamak:"Euro"}, reichtum:{artikel:"der",jamak:"Reichtümer"},
+  irrtum:{artikel:"der",jamak:"Irrtümer"}, abitur:{artikel:"das",jamak:""}, tor:{artikel:"das",jamak:"Tore"},
+  rohr:{artikel:"das",jamak:"Rohre"}, moor:{artikel:"das",jamak:"Moore"}, pinguin:{artikel:"der",jamak:"Pinguine"},
+  termin:{artikel:"der",jamak:"Termine"}, vitamin:{artikel:"das",jamak:"Vitamine"}, mittel:{artikel:"das",jamak:"Mittel"},
+  rätsel:{artikel:"das",jamak:"Rätsel"}, gabel:{artikel:"die",jamak:"Gabeln"}, tafel:{artikel:"die",jamak:"Tafeln"},
+  himmel:{artikel:"der",jamak:"Himmel"}, löffel:{artikel:"der",jamak:"Löffel"}, motor:{artikel:"der",jamak:"Motoren"},
+  doktor:{artikel:"der",jamak:"Doktoren"}, autor:{artikel:"der",jamak:"Autoren"}, faktor:{artikel:"der",jamak:"Faktoren"},
+  direktor:{artikel:"der",jamak:"Direktoren"}, nummer:{artikel:"die",jamak:"Nummern"}, feder:{artikel:"die",jamak:"Federn"},
+  messer:{artikel:"das",jamak:"Messer"}, feuer:{artikel:"das",jamak:"Feuer"}, ufer:{artikel:"das",jamak:"Ufer"},
+  eimer:{artikel:"der",jamak:"Eimer"}, koffer:{artikel:"der",jamak:"Koffer"}, kellner:{artikel:"der",jamak:"Kellner"},
+  gewitter:{artikel:"das",jamak:"Gewitter"}, futur:{artikel:"das",jamak:""},
+  // Kata benda dengan deklinasi lemah (n-Deklination) — bentuknya berubah bukan cuma
+  // di Genitiv, tapi juga Dativ & Akkusativ singular (mis. "des/dem/den Jungen").
+  // "schwach" di bawah ini adalah bentuk yang sudah benar untuk ketiga kasus itu.
+  junge:{artikel:"der",jamak:"Jungen",schwach:"Jungen"}, kunde:{artikel:"der",jamak:"Kunden",schwach:"Kunden"},
+  kollege:{artikel:"der",jamak:"Kollegen",schwach:"Kollegen"}, mensch:{artikel:"der",jamak:"Menschen",schwach:"Menschen"},
+  herr:{artikel:"der",jamak:"Herren",schwach:"Herrn"}, bär:{artikel:"der",jamak:"Bären",schwach:"Bären"},
+  nachbar:{artikel:"der",jamak:"Nachbarn",schwach:"Nachbarn"}, student:{artikel:"der",jamak:"Studenten",schwach:"Studenten"},
+  präsident:{artikel:"der",jamak:"Präsidenten",schwach:"Präsidenten"}, patient:{artikel:"der",jamak:"Patienten",schwach:"Patienten"},
+  löwe:{artikel:"der",jamak:"Löwen",schwach:"Löwen"}, hase:{artikel:"der",jamak:"Hasen",schwach:"Hasen"},
+  neffe:{artikel:"der",jamak:"Neffen",schwach:"Neffen"}, kollegin:{artikel:"die",jamak:"Kolleginnen"},
+  affe:{artikel:"der",jamak:"Affen",schwach:"Affen"}, elefant:{artikel:"der",jamak:"Elefanten",schwach:"Elefanten"},
+  // Kata dasar sehari-hari lain yang sering dipakai tapi tidak cocok pola akhiran manapun
+  wasser:{artikel:"das",jamak:"Wasser"}, brot:{artikel:"das",jamak:"Brote"}, fernseher:{artikel:"der",jamak:"Fernseher"},
+  licht:{artikel:"das",jamak:"Lichter"}, ball:{artikel:"der",jamak:"Bälle"}, ecke:{artikel:"die",jamak:"Ecken"},
+  seite:{artikel:"die",jamak:"Seiten"}, ende:{artikel:"das",jamak:"Enden"}, anfang:{artikel:"der",jamak:"Anfänge"},
+  grund:{artikel:"der",jamak:"Gründe"}, teil:{artikel:"der",jamak:"Teile"}, stelle:{artikel:"die",jamak:"Stellen"},
+  punkt:{artikel:"der",jamak:"Punkte"}, preis:{artikel:"der",jamak:"Preise"}, ware:{artikel:"die",jamak:"Waren"},
+  radio:{artikel:"das",jamak:"Radios"}, tasse:{artikel:"die",jamak:"Tassen"},
+  glas:{artikel:"das",jamak:"Gläser"}, flasche:{artikel:"die",jamak:"Flaschen"}, teller:{artikel:"der",jamak:"Teller"},
+  decke:{artikel:"die",jamak:"Decken"},
+  kissen:{artikel:"das",jamak:"Kissen"}, uhr:{artikel:"die",jamak:"Uhren"}, kalender:{artikel:"der",jamak:"Kalender"},
+  brief:{artikel:"der",jamak:"Briefe"}, paket:{artikel:"das",jamak:"Pakete"}, karte:{artikel:"die",jamak:"Karten"},
+  bild:{artikel:"das",jamak:"Bilder"}, foto:{artikel:"das",jamak:"Fotos"}, farbe:{artikel:"die",jamak:"Farben"},
+  ampel:{artikel:"die",jamak:"Ampeln"}, brücke:{artikel:"die",jamak:"Brücken"}, insel:{artikel:"die",jamak:"Inseln"},
+};
+function lookupKnownWord(wort){ return KNOWN_NOMEN[norm(wort)] || null; }
+
+/* ---- Kamus internal kata kerja tak beraturan (konjugasi Präsens sudah pasti benar) ---- */
+const KNOWN_VERBS = {
+  sein:{ich:"bin",du:"bist",er:"ist",wir:"sind",ihr:"seid",sie:"sind"},
+  haben:{ich:"habe",du:"hast",er:"hat",wir:"haben",ihr:"habt",sie:"haben"},
+  werden:{ich:"werde",du:"wirst",er:"wird",wir:"werden",ihr:"werdet",sie:"werden"},
+  wissen:{ich:"weiß",du:"weißt",er:"weiß",wir:"wissen",ihr:"wisst",sie:"wissen"},
+  tun:{ich:"tue",du:"tust",er:"tut",wir:"tun",ihr:"tut",sie:"tun"},
+  können:{ich:"kann",du:"kannst",er:"kann",wir:"können",ihr:"könnt",sie:"können"},
+  müssen:{ich:"muss",du:"musst",er:"muss",wir:"müssen",ihr:"müsst",sie:"müssen"},
+  dürfen:{ich:"darf",du:"darfst",er:"darf",wir:"dürfen",ihr:"dürft",sie:"dürfen"},
+  sollen:{ich:"soll",du:"sollst",er:"soll",wir:"sollen",ihr:"sollt",sie:"sollen"},
+  wollen:{ich:"will",du:"willst",er:"will",wir:"wollen",ihr:"wollt",sie:"wollen"},
+  mögen:{ich:"mag",du:"magst",er:"mag",wir:"mögen",ihr:"mögt",sie:"mögen"},
+  möchten:{ich:"möchte",du:"möchtest",er:"möchte",wir:"möchten",ihr:"möchtet",sie:"möchten"},
+  fahren:{ich:"fahre",du:"fährst",er:"fährt",wir:"fahren",ihr:"fahrt",sie:"fahren"},
+  tragen:{ich:"trage",du:"trägst",er:"trägt",wir:"tragen",ihr:"tragt",sie:"tragen"},
+  schlagen:{ich:"schlage",du:"schlägst",er:"schlägt",wir:"schlagen",ihr:"schlagt",sie:"schlagen"},
+  waschen:{ich:"wasche",du:"wäschst",er:"wäscht",wir:"waschen",ihr:"wascht",sie:"waschen"},
+  wachsen:{ich:"wachse",du:"wächst",er:"wächst",wir:"wachsen",ihr:"wachst",sie:"wachsen"},
+  fallen:{ich:"falle",du:"fällst",er:"fällt",wir:"fallen",ihr:"fallt",sie:"fallen"},
+  gefallen:{ich:"gefalle",du:"gefällst",er:"gefällt",wir:"gefallen",ihr:"gefallt",sie:"gefallen"},
+  halten:{ich:"halte",du:"hältst",er:"hält",wir:"halten",ihr:"haltet",sie:"halten"},
+  lassen:{ich:"lasse",du:"lässt",er:"lässt",wir:"lassen",ihr:"lasst",sie:"lassen"},
+  laufen:{ich:"laufe",du:"läufst",er:"läuft",wir:"laufen",ihr:"lauft",sie:"laufen"},
+  schlafen:{ich:"schlafe",du:"schläfst",er:"schläft",wir:"schlafen",ihr:"schlaft",sie:"schlafen"},
+  backen:{ich:"backe",du:"bäckst",er:"bäckt",wir:"backen",ihr:"backt",sie:"backen"},
+  raten:{ich:"rate",du:"rätst",er:"rät",wir:"raten",ihr:"ratet",sie:"raten"},
+  braten:{ich:"brate",du:"brätst",er:"brät",wir:"braten",ihr:"bratet",sie:"braten"},
+  fangen:{ich:"fange",du:"fängst",er:"fängt",wir:"fangen",ihr:"fangt",sie:"fangen"},
+  laden:{ich:"lade",du:"lädst",er:"lädt",wir:"laden",ihr:"ladet",sie:"laden"},
+  geben:{ich:"gebe",du:"gibst",er:"gibt",wir:"geben",ihr:"gebt",sie:"geben"},
+  nehmen:{ich:"nehme",du:"nimmst",er:"nimmt",wir:"nehmen",ihr:"nehmt",sie:"nehmen"},
+  essen:{ich:"esse",du:"isst",er:"isst",wir:"essen",ihr:"esst",sie:"essen"},
+  lesen:{ich:"lese",du:"liest",er:"liest",wir:"lesen",ihr:"lest",sie:"lesen"},
+  sehen:{ich:"sehe",du:"siehst",er:"sieht",wir:"sehen",ihr:"seht",sie:"sehen"},
+  sprechen:{ich:"spreche",du:"sprichst",er:"spricht",wir:"sprechen",ihr:"sprecht",sie:"sprechen"},
+  treffen:{ich:"treffe",du:"triffst",er:"trifft",wir:"treffen",ihr:"trefft",sie:"treffen"},
+  helfen:{ich:"helfe",du:"hilfst",er:"hilft",wir:"helfen",ihr:"helft",sie:"helfen"},
+  werfen:{ich:"werfe",du:"wirfst",er:"wirft",wir:"werfen",ihr:"werft",sie:"werfen"},
+  sterben:{ich:"sterbe",du:"stirbst",er:"stirbt",wir:"sterben",ihr:"sterbt",sie:"sterben"},
+  brechen:{ich:"breche",du:"brichst",er:"bricht",wir:"brechen",ihr:"brecht",sie:"brechen"},
+  stehlen:{ich:"stehle",du:"stiehlst",er:"stiehlt",wir:"stehlen",ihr:"stehlt",sie:"stehlen"},
+  empfehlen:{ich:"empfehle",du:"empfiehlst",er:"empfiehlt",wir:"empfehlen",ihr:"empfehlt",sie:"empfehlen"},
+  vergessen:{ich:"vergesse",du:"vergisst",er:"vergisst",wir:"vergessen",ihr:"vergesst",sie:"vergessen"},
+  treten:{ich:"trete",du:"trittst",er:"tritt",wir:"treten",ihr:"tretet",sie:"treten"},
+};
+
+/* ---- Konjugasi Präsens beraturan (heuristik pola akhiran, bukan aturan pasti — kata kerja
+       tak beraturan yang belum ada di KNOWN_VERBS bisa berbeda, terutama perubahan vokal) ---- */
+function conjugateRegular(infinitiv){
+  const inf = String(infinitiv||"").trim();
+  const lower = inf.toLowerCase();
+  if(!inf) return null;
+  if(lower.endsWith("eln")){
+    const base = inf.slice(0,-1);
+    const ichForm = base.length>2 ? base.slice(0,-2)+"le" : base+"e";
+    return {ich:ichForm, du:base+"st", er:base+"t", wir:inf, ihr:base+"t", sie:inf};
+  }
+  if(lower.endsWith("ern")){
+    const base = inf.slice(0,-1);
+    return {ich:base+"e", du:base+"st", er:base+"t", wir:inf, ihr:base+"t", sie:inf};
+  }
+  if(!lower.endsWith("en")) return null;
+  const stem = inf.slice(0,-2);
+  const stemLower = stem.toLowerCase();
+  const needsE = /(d|t|chn|ffn|gn|dn|tm)$/.test(stemLower);
+  const sibilant = /(s|ß|z|x)$/.test(stemLower);
+  const duEnding = needsE ? "est" : (sibilant ? "t" : "st");
+  const erEnding = needsE ? "et" : "t";
+  const ihrEnding = needsE ? "et" : "t";
+  return {ich:stem+"e", du:stem+duEnding, er:stem+erEnding, wir:inf, ihr:stem+ihrEnding, sie:inf};
+}
+function conjugateVerb(wort){
+  const known = KNOWN_VERBS[norm(wort)];
+  if(known) return {table:known, known:true};
+  return {table:conjugateRegular(wort), known:false};
+}
+
+/* ---- Tebakan artikel: cek kamus internal dulu, baru heuristik akhiran kata (bukan aturan pasti) ---- */
+function guessArtikel(wort){
+  const known = lookupKnownWord(wort);
+  if(known) return known.artikel;
+  const w = norm(wort);
+  if(!w) return null;
+  // Hanya akhiran yang HAMPIR TANPA PENGECUALIAN yang dipakai untuk menebak.
+  // Akhiran yang ternyata sering meleset di kosakata sehari-hari — "-er", "-el",
+  // "-ig", "-ich", "-or", "-in" (bare) — sengaja DIHAPUS dari daftar ini karena
+  // ketiganya bercampur di antara der/die/das (mis. das Wasser, das Mittel,
+  // der Pinguin, das Tor). Kata-kata pengecualian yang umum (Moment, Talent,
+  // Prozent, Euro, dll) sudah dimasukkan ke kamus internal supaya tetap benar.
+  const dasEnd = ["chen","lein","tum","ment","um","o","ma"];
+  const dieEnd = ["ung","heit","keit","schaft","tion","sion","tät","ie","ik","enz","anz","ur","ei","ine"];
+  const derEnd = ["ling","ismus","us","ant","ent","eur","ist"];
+  for(const suf of dasEnd) if(w.endsWith(suf)) return "das";
+  for(const suf of dieEnd) if(w.endsWith(suf)) return "die";
+  for(const suf of derEnd) if(w.endsWith(suf)) return "der";
+  // Tidak ketemu pola yang cukup diyakini — lebih baik jujur bilang "tidak tahu"
+  // daripada menebak asal dan sering salah. Pengguna diminta memilih sendiri.
+  return null;
+}
+
+/* ---- Tebakan bentuk jamak: cek kamus internal dulu, baru heuristik akhiran kata (bukan aturan pasti) ---- */
+function guessPlural(wort, artikel){
+  const known = lookupKnownWord(wort);
+  if(known && known.jamak) return known.jamak;
+  if(!artikel) return ""; // artikel belum diketahui/dipilih — jangan menebak jamak yang mungkin salah asumsi gender
+  const w = String(wort||"").trim();
+  if(!w) return "";
+  const lower = w.toLowerCase();
+  if(artikel==="die"){
+    if(lower.endsWith("in")) return w+"nen";
+    if(/(ung|heit|keit|schaft|tion|sion|tät|ur|ik|enz|anz)$/.test(lower)) return w+"en";
+    if(lower.endsWith("e")) return w+"n";
+    return w+"en";
+  }
+  if(artikel==="der"){
+    if(lower.endsWith("e")) return w+"n";
+    if(/(er|el|en|chen|lein)$/.test(lower)) return w;
+    if(lower.endsWith("ling")) return w+"e";
+    if(lower.endsWith("us")) return w.slice(0,-2)+"en";
+    if(/(ent|ant|ist|or|eur|ismus)$/.test(lower)) return w+"en";
+    return w+"e";
+  }
+  if(artikel==="das"){
+    if(/(chen|lein)$/.test(lower)) return w;
+    if(lower.endsWith("um")) return w.slice(0,-2)+"en";
+    if(lower.endsWith("ment")) return w+"e";
+    if(/(er|el|en)$/.test(lower)) return w;
+    return w+"e";
+  }
+  return "";
+}
+
+/* ---- Tabel deklinasi (artikel tentu, pola umum — kata benda tak beraturan bisa berbeda) ---- */
+const ARTIKEL_DEKLINASI = {
+  der:{nom:"der",gen:"des",dat:"dem",akk:"den"},
+  die:{nom:"die",gen:"der",dat:"der",akk:"die"},
+  das:{nom:"das",gen:"des",dat:"dem",akk:"das"},
+};
+const PLURAL_DEKLINASI = {nom:"die",gen:"der",dat:"den",akk:"die"};
+function nomenGenitivSingular(wort, artikel){
+  if(artikel!=="der" && artikel!=="das") return wort;
+  const lower = wort.toLowerCase();
+  if(/(s|ß|x|z|sch)$/.test(lower)) return wort+"es";
+  return wort+"s";
+}
+function nomenDativPlural(jamak){
+  if(!jamak) return jamak;
+  if(/[ns]$/i.test(jamak)) return jamak;
+  return jamak+"n";
+}
+function buildDeklinasiTable(word){
+  const {artikel, wort, jamak} = word;
+  const known = lookupKnownWord(wort);
+  // Kata benda "deklinasi lemah" (n-Deklination, mis. der Junge/Kunde/Herr) berubah
+  // bentuk bukan cuma di Genitiv, tapi juga Dativ & Akkusativ singular. Kalau kata
+  // ini ada di kamus internal dengan bentuk lemahnya, pakai itu; kalau tidak, anggap
+  // deklinasi kuat (bentuk kata tidak berubah kecuali Genitiv +s/-es).
+  const weakForm = known && known.schwach ? known.schwach : null;
+  const kasusList = [
+    {key:"nom", label:"Nominativ"},
+    {key:"gen", label:"Genitiv"},
+    {key:"dat", label:"Dativ"},
+    {key:"akk", label:"Akkusativ"},
+  ];
+  return kasusList.map(k=>{
+    let sg = "–";
+    if(artikel && ARTIKEL_DEKLINASI[artikel]){
+      let nomenForm = wort;
+      if(k.key!=="nom" && weakForm){
+        nomenForm = weakForm;
+      } else if(k.key==="gen"){
+        nomenForm = nomenGenitivSingular(wort, artikel);
+      }
+      sg = ARTIKEL_DEKLINASI[artikel][k.key] + " " + nomenForm;
+    } else if(!artikel){
+      sg = "–";
+    }
+    let pl = "–";
+    const plWort = jamak && jamak.trim() ? jamak.trim() : (!artikel ? wort : "");
+    if(plWort){
+      const nomenForm = k.key==="dat" ? nomenDativPlural(plWort) : plWort;
+      pl = PLURAL_DEKLINASI[k.key] + " " + nomenForm;
+    }
+    return {label:k.label, sg, pl};
+  });
+}
+
+function wordTag(word){
+  if(word && word.jenis === "verb") return {cls:"tag-verb", label:"verb"};
+  return ARTIKEL[(word && word.artikel) || ""] || ARTIKEL[""];
+}
+
+function migrateData(d){
+  if(d && Array.isArray(d.categories)){
+    d.categories.forEach(c=>{
+      (c.words||[]).forEach(w=>{
+        if(typeof w.jamak !== "string") w.jamak = "";
+        if(w.jenis !== "verb") w.jenis = "nomen";
+        if(typeof w.lawan !== "string") w.lawan = "";
+        if(typeof w.sinonim !== "string") w.sinonim = "";
+      });
+    });
+  }
+  return d;
+}
+function loadData(){
+  try{
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if(raw) return migrateData(JSON.parse(raw));
+  }catch(e){}
+  const seeded = migrateData(SEED);
+  saveData(seeded);
+  return seeded;
+}
+function saveData(d){
+  try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(d)); }catch(e){}
+}
+
+let data = loadData();
+let openCats = new Set();
+let selectedCatId = data.categories[0] ? data.categories[0].id : null;
+let editingWordId = null;
+let formState = {artikel:null, wort:"", arti:"", jamak:"", jenis:"nomen"};
+let artikelTouched = false;
+let jamakTouched = false;
+let detailWordId = null;
+let duplicateInfo = null;      // {cat, word} bila terdeteksi duplikat
+let duplicateConfirmed = false;
+let artikelMissingWarning = false; // true kalau coba simpan Nomen tanpa pilih artikel dulu
+let translating = false;
+let confirmDeleteCat = null;
+let flashDeck = [];
+let flashIndex = 0;
+let flashFlipped = false;
+let flashFilter = "all";
+
+function persist(){ saveData(data); renderHeader(); }
+
+function renderHeader(){
+  const el = document.getElementById("header-meta");
+  if(!el) return;
+  const total = data.categories.reduce((s,c)=>s+c.words.length,0);
+  el.textContent = total + " kata · " + data.categories.length + " tema";
+}
+
+/* ---------------- TABS ---------------- */
+document.querySelectorAll(".tabbtn").forEach(btn=>{
+  btn.addEventListener("click", ()=>{
+    document.querySelectorAll(".tabbtn").forEach(b=>b && b.classList && b.classList.remove("active"));
+    if(btn && btn.classList) btn.classList.add("active");
+    const tab = btn.dataset.tab;
+    const wrapIds = {kamus:"kamus-wrap", kelola:"kelola-wrap", sinonim:"sinonim-wrap", flashcard:"flash-wrap"};
+    Object.keys(wrapIds).forEach(t=>{
+      const sectionEl = document.getElementById(wrapIds[t]);
+      if(sectionEl && sectionEl.classList) sectionEl.classList.toggle("hidden", t!==tab);
+    });
+    if(tab==="kamus") renderKamus();
+    if(tab==="kelola") renderKelola();
+    if(tab==="sinonim") renderSinonim();
+    if(tab==="flashcard") { flashDeck = buildDeck(flashFilter, true); flashIndex=0; flashFlipped=false; renderFlashcard(); }
+  });
+});
+
+/* ---------------- MENU 1: KAMUS ---------------- */
+let kamusQuery = "";
+
+function renderKamus(){
+  const wrap = document.getElementById("kamus-wrap");
+  if(!wrap) return;
+  if(data.categories.length===0){
+    wrap.innerHTML = '<div class="empty-state">Belum ada tema. Buka menu Kelola untuk menambahkan tema dan kata pertamamu.</div>';
+    return;
+  }
+  // Search box dibuat SEKALI di sini dan tidak pernah dihancurkan lagi lewat innerHTML
+  // agar fokus & keyboard di HP tidak tertutup setiap kali mengetik satu huruf.
+  wrap.innerHTML = '<input id="kamus-search" placeholder="Cari kata, arti, atau tema…" value="'+esc(kamusQuery)+'" />'
+    + '<div id="kamus-results"></div>';
+
+  const search = document.getElementById("kamus-search");
+  if(search){
+    search.addEventListener("input", e=>{ kamusQuery = e.target.value; renderKamusResults(); });
+  }
+
+  renderKamusResults();
+}
+
+function renderKamusResults(){
+  const results = document.getElementById("kamus-results");
+  if(!results) return;
+  const q = kamusQuery.trim().toLowerCase();
+  let html = "";
+
+  let anyVisible = false;
+  data.categories.forEach(cat=>{
+    let words = sortWords(cat.words).filter(w=>
+      !q || w.wort.toLowerCase().includes(q) || w.arti.toLowerCase().includes(q) || cat.name.toLowerCase().includes(q)
+    );
+    if(q && words.length===0) return;
+    anyVisible = true;
+    const isOpen = openCats.has(cat.id) || !!q;
+    html += '<div class="cat-section">';
+    html += '<button class="cat-header" data-cat="'+cat.id+'">';
+    html += '<span class="cat-header-left"><span class="chev '+(isOpen?"":"closed")+'">▾</span><span class="cat-name">'+esc(cat.name)+'</span></span>';
+    html += '<span class="cat-count">'+words.length+'</span></button>';
+    if(isOpen){
+      html += '<div class="word-grid">';
+      if(words.length===0) html += '<div class="empty-row">Tidak ada kata yang cocok.</div>';
+      words.forEach(w=>{
+        const a = wordTag(w);
+        html += '<button class="word-card" data-detail="'+w.id+'"><span class="tag '+a.cls+'">'+a.label+'</span>';
+        html += '<div><div class="word-de">'+esc(w.wort)+'</div><div class="word-id">'+esc(w.arti)+'</div></div></button>';
+      });
+      html += '</div>';
+    }
+    html += '</div>';
+  });
+
+  if(q && !anyVisible){
+    html += '<div class="empty-state">Tidak ada hasil untuk "'+esc(kamusQuery)+'".</div>';
+  }
+
+  results.innerHTML = html;
+
+  results.querySelectorAll(".cat-header").forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      const id = btn.dataset.cat;
+      if(openCats.has(id)) openCats.delete(id); else openCats.add(id);
+      renderKamusResults();
+    });
+  });
+
+  results.querySelectorAll("[data-detail]").forEach(btn=>{
+    btn.addEventListener("click", ()=>{ openWordDetail(btn.dataset.detail); });
+  });
+}
+
+/* ---------------- MODAL DETAIL KATA ---------------- */
+function findWordById(id){
+  for(const cat of data.categories){
+    const w = cat.words.find(w=>w.id===id);
+    if(w) return {word:w, catName:cat.name};
+  }
+  return null;
+}
+function openWordDetail(id){
+  detailWordId = id;
+  renderWordDetail();
+}
+function closeWordDetail(){
+  detailWordId = null;
+  const overlay = document.getElementById("word-modal-overlay");
+  if(overlay){ overlay.classList.add("hidden"); overlay.innerHTML = ""; }
+}
+function renderWordDetail(){
+  const overlay = document.getElementById("word-modal-overlay");
+  if(!overlay || !detailWordId) return;
+  const found = findWordById(detailWordId);
+  if(!found){ closeWordDetail(); return; }
+  const {word, catName} = found;
+  const a = wordTag(word);
+
+  let html = '<div class="modal-sheet">';
+  html += '<div class="modal-head"><div><span class="tag '+a.cls+'">'+a.label+'</span> <span class="modal-word">'+esc(word.wort)+'</span></div>';
+  html += '<button class="icon-btn" id="close-modal-btn">✕</button></div>';
+  html += '<div class="modal-arti">'+esc(word.arti)+' · '+esc(catName)+'</div>';
+
+  if(word.jenis === "verb"){
+    const conj = conjugateVerb(word.wort);
+    if(conj.table){
+      const personen = [
+        ["ich", conj.table.ich], ["du", conj.table.du], ["er / sie / es", conj.table.er],
+        ["wir", conj.table.wir], ["ihr", conj.table.ihr], ["sie / Sie", conj.table.sie],
+      ];
+      html += '<table class="deklinasi-table"><thead><tr><th>Person</th><th>Bentuk (Präsens)</th></tr></thead><tbody>';
+      personen.forEach(p=>{
+        html += '<tr><td>'+esc(p[0])+'</td><td>'+esc(p[1])+'</td></tr>';
+      });
+      html += '</tbody></table>';
+      html += '<div class="deklinasi-note">'+(conj.known
+        ? 'Konjugasi kata kerja tak beraturan ini sudah dicek dari kamus internal.'
+        : '🔮 Mengikuti pola kata kerja beraturan. Kalau kata ini ternyata tak beraturan (mis. ada perubahan huruf vokal), bentuknya bisa berbeda.')+'</div>';
+    } else {
+      html += '<div class="deklinasi-note">Kata ini tidak terlihat seperti bentuk infinitif kata kerja (biasanya berakhiran -en), jadi konjugasi belum bisa ditampilkan otomatis.</div>';
+    }
+  } else {
+    const rows = buildDeklinasiTable(word);
+    if(word.artikel){
+      html += '<div class="modal-jamak">Jamak (plural): <b>'+(word.jamak ? esc(word.jamak) : "belum diisi")+'</b></div>';
+    } else {
+      html += '<div class="modal-jamak">Kata ini sudah berbentuk jamak.</div>';
+    }
+    html += '<table class="deklinasi-table"><thead><tr><th>Kasus</th><th>Singular</th><th>Plural</th></tr></thead><tbody>';
+    rows.forEach(r=>{
+      html += '<tr><td>'+esc(r.label)+'</td><td>'+esc(r.sg)+'</td><td>'+esc(r.pl)+'</td></tr>';
+    });
+    html += '</tbody></table>';
+    html += '<div class="deklinasi-note">Tabel mengikuti pola deklinasi artikel tentu secara umum. Kata benda tak beraturan (mis. deklinasi lemah/n-Deklination) bisa berbeda.</div>';
+  }
+
+  if(word.lawan && word.lawan.trim()){
+    html += '<div class="modal-jamak">Lawan kata: <b>'+esc(word.lawan.trim())+'</b></div>';
+  }
+  if(word.sinonim && word.sinonim.trim()){
+    html += '<div class="modal-jamak">Persamaan kata: <b>'+esc(word.sinonim.trim())+'</b></div>';
+  }
+
+  html += '</div>';
+
+  overlay.innerHTML = html;
+  overlay.classList.remove("hidden");
+
+  const closeBtn = document.getElementById("close-modal-btn");
+  if(closeBtn) closeBtn.addEventListener("click", closeWordDetail);
+  overlay.onclick = e=>{ if(e.target===overlay) closeWordDetail(); };
+}
+
+/* ---------------- MENU 2: KELOLA ---------------- */
+function resetForm(){
+  formState = {artikel:null, wort:"", arti:"", jamak:"", jenis:"nomen"};
+  artikelTouched = false;
+  jamakTouched = false;
+  editingWordId = null;
+  duplicateInfo = null;
+  duplicateConfirmed = false;
+  artikelMissingWarning = false;
+  translating = false;
+}
+
+function findDuplicate(wort){
+  const w = norm(wort);
+  if(!w) return null;
+  for(const cat of data.categories){
+    for(const word of cat.words){
+      if(word.id===editingWordId) continue;
+      if(norm(word.wort)===w) return {catName:cat.name, word};
+    }
+  }
+  return null;
+}
+
+function buildJamakFieldHtml(){
+  const knownEntry = lookupKnownWord(formState.wort);
+  let html = "";
+  if(formState.artikel === ""){
+    // eksplisit dipilih tombol "kata jamak" oleh pengguna sendiri — bukan tebakan
+    if(formState.wort.trim()){
+      html += '<span class="guess-note">Kata "kata jamak" — dianggap sudah berbentuk jamak, tidak perlu isi plural.</span>';
+    }
+  } else {
+    // artikel der/die/das ATAU belum diketahui (null) — tetap tampilkan kolom
+    // plural supaya bisa diisi manual walau tebakan artikelnya belum ada.
+    const placeholderGuess = formState.artikel ? (guessPlural(formState.wort||"x",formState.artikel)||"...") : "isi manual";
+    html += '<input id="jamak-input" placeholder="Bentuk jamak (plural), mis. '+placeholderGuess+'" value="'+esc(formState.jamak)+'" />';
+    if(formState.jamak && !jamakTouched && formState.wort.trim()){
+      if(knownEntry && knownEntry.jamak) html += '<span class="guess-note">✅ bentuk jamak dari kamus internal</span>';
+      else html += '<span class="guess-note">🔮 tebakan otomatis — boleh diedit kalau salah</span>';
+    } else if(!formState.artikel && formState.wort.trim()){
+      html += '<span class="guess-note">Artikel belum dipilih, jadi jamak belum bisa ditebak — isi manual dulu.</span>';
+    }
+  }
+  return html;
+}
+
+function renderKelola(){
+  const wrap = document.getElementById("kelola-wrap");
+  if(!wrap) return;
+  const selectedCat = data.categories.find(c=>c.id===selectedCatId) || null;
+
+  let html = '<div><h2 class="section-title">Tema</h2><div class="cat-list">';
+  if(data.categories.length===0){
+    html += '<div class="empty-row">Belum ada tema.</div>';
+  }
+  data.categories.forEach(c=>{
+    html += '<div class="cat-list-row">';
+    html += '<button class="cat-list-btn '+(selectedCatId===c.id?"active":"")+'" data-select="'+c.id+'">'+esc(c.name)+'<span class="cat-list-count">'+c.words.length+'</span></button>';
+    if(confirmDeleteCat===c.id){
+      html += '<span class="confirm-row"><button class="icon-btn-danger" data-confirmdel="'+c.id+'">✓</button><button class="icon-btn" data-canceldel="1">✕</button></span>';
+    } else {
+      html += '<button class="icon-btn" data-askdel="'+c.id+'">🗑</button>';
+    }
+    html += '</div>';
+  });
+  html += '</div>';
+  html += '<div class="new-cat-row"><input id="new-cat-input" placeholder="Nama tema baru, mis. Familie" />';
+  html += '<button class="btn btn-primary" id="add-cat-btn">+ Tambah</button></div></div>';
+
+  html += '<div style="margin-top:24px;">';
+  html += '<h2 class="section-title">'+(selectedCat ? 'Kata dalam "'+esc(selectedCat.name)+'"' : "Pilih tema dulu")+'</h2>';
+
+  if(selectedCat){
+    html += '<div class="word-form">';
+    html += '<div class="jenis-picker">';
+    html += '<button class="jenis-btn'+(formState.jenis!=="verb"?" active":"")+'" data-jenis="nomen">Nomen</button>';
+    html += '<button class="jenis-btn'+(formState.jenis==="verb"?" active":"")+'" data-jenis="verb">Verba (kata kerja)</button>';
+    html += '</div>';
+    if(formState.jenis!=="verb"){
+      html += '<div class="artikel-picker">';
+      const knownEntry = lookupKnownWord(formState.wort);
+      ["der","die","das",""].forEach(a=>{
+        const active = formState.artikel===a;
+        const isGuess = active && !artikelTouched && a!=="" && !knownEntry;
+        const style = active
+          ? 'style="background:var(--'+(a||"none")+'-bg);color:var(--'+(a||"none")+'-fg);border-color:var(--'+(a||"none")+'-bg);"'
+          : 'style="border-color:var(--'+(a||"none")+'-bg);"';
+        html += '<button class="artikel-pick-btn'+(isGuess?" tag-guess":"")+'" data-artikel="'+a+'" '+style+'>'+(a||"kata jamak")+'</button>';
+      });
+      if(formState.artikel && !artikelTouched && formState.wort.trim()){
+        if(knownEntry) html += '<span class="guess-note">✅ artikel dari kamus internal</span>';
+        else html += '<span class="guess-note">🔮 tebakan otomatis — ketuk der/die/das kalau salah</span>';
+      } else if(!artikelTouched && formState.artikel===null && formState.wort.trim()){
+        html += '<span class="guess-note guess-note-unsure">❓ tidak yakin — kata ini tidak ada di kamus internal dan tidak cocok pola manapun. Silakan pilih der/die/das sendiri.</span>';
+      }
+      html += '</div>';
+    }
+    html += '<input id="word-input" placeholder="'+(formState.jenis==="verb"?'Kata kerja, bentuk infinitif — mis. wohnen':'Kata dalam bahasa Jerman')+'" value="'+esc(formState.wort)+'" />';
+    html += '<div class="field-row">';
+    html += '<input id="arti-input" placeholder="Artinya dalam bahasa Indonesia" value="'+esc(formState.arti)+'" />';
+    html += '<button class="translate-btn" id="translate-btn" title="Terjemahkan otomatis">'+(translating?"…":"🌐")+'</button>';
+    html += '</div>';
+    if(formState.jenis!=="verb"){
+      html += '<div id="jamak-container">'+buildJamakFieldHtml()+'</div>';
+    }
+
+    if(artikelMissingWarning && formState.jenis!=="verb" && formState.artikel===null){
+      html += '<div class="warning-box">⚠️ Pilih dulu der / die / das (atau "kata jamak" kalau kata ini memang sudah bentuk jamak) sebelum disimpan — supaya deklinasinya tidak salah.</div>';
+    }
+
+    if(duplicateInfo){
+      html += '<div class="warning-box">';
+      html += '⚠️ Kata "<b>'+esc(duplicateInfo.word.wort)+'</b>" sudah ada di tema "<b>'+esc(duplicateInfo.catName)+'</b>" (artinya: '+esc(duplicateInfo.word.arti)+').';
+      html += '<div class="warning-actions">';
+      html += '<button class="btn btn-warn" id="confirm-dup-btn">Tetap tambahkan</button>';
+      html += '<button class="btn btn-ghost" id="cancel-dup-btn">Batal</button>';
+      html += '</div></div>';
+    }
+
+    html += '<div class="word-form-actions">';
+    html += '<button class="btn btn-primary" id="save-word-btn">'+(editingWordId?"Simpan perubahan":"+ Tambah kata")+'</button>';
+    if(editingWordId) html += '<button class="btn btn-ghost" id="cancel-edit-btn">Batal</button>';
+    html += '</div></div>';
+
+    html += '<div class="manage-word-list">';
+    const words = sortWords(selectedCat.words);
+    if(words.length===0) html += '<div class="empty-row">Belum ada kata di tema ini.</div>';
+    words.forEach(w=>{
+      const a = wordTag(w);
+      html += '<div class="manage-word-row"><span class="tag '+a.cls+'">'+a.label+'</span>';
+      html += '<div class="manage-word-body"><div class="word-de">'+esc(w.wort)+'</div><div class="word-id">'+esc(w.arti)+'</div></div>';
+      html += '<div class="manage-word-actions"><button class="icon-btn" data-editword="'+w.id+'">✎</button><button class="icon-btn-danger" data-delword="'+w.id+'">🗑</button></div></div>';
+    });
+    html += '</div>';
+  }
+  html += '</div>';
+
+  wrap.innerHTML = html;
+  attachKelolaHandlers();
+}
+
+async function autoTranslate(){
+  const wi = document.getElementById("word-input");
+  const ai = document.getElementById("arti-input");
+  const wort = wi ? wi.value.trim() : formState.wort.trim();
+  if(!wort) return;
+  // Kalau memang sedang offline, jangan buang waktu nunggu koneksi gagal —
+  // langsung biarkan pengguna mengisi arti secara manual.
+  if(typeof navigator !== "undefined" && navigator.onLine === false){
+    return;
+  }
+  translating = true;
+  renderKelola();
+  const wiAfter = document.getElementById("word-input");
+  if(wiAfter) wiAfter.focus();
+  try{
+    const res = await fetch("https://api.mymemory.translated.net/get?q="+encodeURIComponent(wort)+"&langpair=de|id");
+    const json = await res.json();
+    const translated = json && json.responseData && json.responseData.translatedText;
+    if(translated){
+      formState.arti = translated;
+    }
+  }catch(e){
+    // gagal terhubung / offline — biarkan pengguna isi manual
+  }
+  translating = false;
+  formState.wort = wort;
+  renderKelola();
+  const ai2 = document.getElementById("arti-input");
+  if(ai2){ ai2.focus(); ai2.selectionStart = ai2.selectionEnd = ai2.value.length; }
+}
+
+function attachKelolaHandlers(){
+  const wrap = document.getElementById("kelola-wrap");
+  if(!wrap) return;
+
+  wrap.querySelectorAll("[data-select]").forEach(btn=>{
+    btn.addEventListener("click", ()=>{ selectedCatId = btn.dataset.select; resetForm(); renderKelola(); });
+  });
+  wrap.querySelectorAll("[data-askdel]").forEach(btn=>{
+    btn.addEventListener("click", ()=>{ confirmDeleteCat = btn.dataset.askdel; renderKelola(); });
+  });
+  const cancelDel = wrap.querySelector("[data-canceldel]");
+  if(cancelDel) cancelDel.addEventListener("click", ()=>{ confirmDeleteCat=null; renderKelola(); });
+  wrap.querySelectorAll("[data-confirmdel]").forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      const id = btn.dataset.confirmdel;
+      data.categories = data.categories.filter(c=>c.id!==id);
+      confirmDeleteCat = null;
+      if(selectedCatId===id) selectedCatId = data.categories[0] ? data.categories[0].id : null;
+      resetForm();
+      persist(); renderKelola();
+    });
+  });
+
+  const addCatBtn = document.getElementById("add-cat-btn");
+  const newCatInput = document.getElementById("new-cat-input");
+  function addCategory(){
+    if(!newCatInput) return;
+    const name = newCatInput.value.trim();
+    if(!name) return;
+    const newCat = {id: uid("cat"), name, words:[]};
+    data.categories.push(newCat);
+    selectedCatId = newCat.id;
+    resetForm();
+    persist(); renderKelola();
+  }
+  if(addCatBtn) addCatBtn.addEventListener("click", addCategory);
+  if(newCatInput) newCatInput.addEventListener("keydown", e=>{ if(e.key==="Enter") addCategory(); });
+
+  wrap.querySelectorAll("[data-jenis]").forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      const wi = document.getElementById("word-input"), ai = document.getElementById("arti-input"),
+            ji = document.getElementById("jamak-input");
+      if(wi) formState.wort = wi.value;
+      if(ai) formState.arti = ai.value;
+      if(ji) formState.jamak = ji.value;
+      formState.jenis = btn.dataset.jenis === "verb" ? "verb" : "nomen";
+      renderKelola();
+    });
+  });
+
+  wrap.querySelectorAll("[data-artikel]").forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      formState.artikel = btn.dataset.artikel;
+      artikelTouched = true;
+      artikelMissingWarning = false;
+      const wi = document.getElementById("word-input"), ai = document.getElementById("arti-input"), ji = document.getElementById("jamak-input");
+      if(wi) formState.wort = wi.value;
+      if(ai) formState.arti = ai.value;
+      if(ji) formState.jamak = ji.value;
+      if(!jamakTouched) formState.jamak = guessPlural(formState.wort, formState.artikel);
+      renderKelola();
+    });
+  });
+
+  function renderJamakContainer(){
+    const container = document.getElementById("jamak-container");
+    if(!container) return;
+    container.innerHTML = buildJamakFieldHtml();
+    const ji = document.getElementById("jamak-input");
+    if(ji){
+      ji.addEventListener("input", e=>{ formState.jamak = e.target.value; jamakTouched = true; });
+      ji.addEventListener("keydown", e=>{ if(e.key==="Enter") saveWord(); });
+    }
+  }
+
+  const wordInput = document.getElementById("word-input");
+  const artiInput = document.getElementById("arti-input");
+  renderJamakContainer();
+  if(wordInput){
+    wordInput.addEventListener("input", e=>{
+      formState.wort = e.target.value;
+      duplicateInfo = null; duplicateConfirmed = false;
+      if(formState.jenis === "verb") return; // verba tidak punya artikel/jamak, tidak perlu ditebak
+      const knownEntry = lookupKnownWord(formState.wort);
+      if(!artikelTouched){
+        formState.artikel = guessArtikel(formState.wort);
+        const picker = wrap.querySelector(".artikel-picker");
+        if(picker){
+          wrap.querySelectorAll("[data-artikel]").forEach(b=>{
+            const a = b.dataset.artikel;
+            const active = formState.artikel===a;
+            b.style.background = active ? "var(--"+(a||"none")+"-bg)" : "transparent";
+            b.style.color = active ? "var(--"+(a||"none")+"-fg)" : "var(--ink)";
+            b.classList.toggle("tag-guess", active && a!=="" && !knownEntry);
+          });
+          const note = wrap.querySelector(".artikel-picker .guess-note");
+          const wordFilled = formState.wort.trim();
+          const shouldShowNote = !!wordFilled;
+          const noteText = formState.artikel
+            ? (knownEntry ? "✅ artikel dari kamus internal" : "🔮 tebakan otomatis — ketuk der/die/das kalau salah")
+            : "❓ tidak yakin — kata ini tidak ada di kamus internal dan tidak cocok pola manapun. Silakan pilih der/die/das sendiri.";
+          if(shouldShowNote && !note){
+            const span = document.createElement("span");
+            span.className = "guess-note";
+            span.textContent = noteText;
+            picker.appendChild(span);
+          } else if(shouldShowNote && note){
+            note.textContent = noteText;
+          } else if(!shouldShowNote && note){
+            note.remove();
+          }
+        }
+      }
+      if(!jamakTouched){
+        formState.jamak = guessPlural(formState.wort, formState.artikel);
+      }
+      // Hanya bagian kecil kolom jamak yang dibangun ulang di sini — bukan
+      // seluruh form — supaya kolom kata (yang sedang diketik) tidak pernah
+      // dihancurkan-dan-dibuat-ulang dan keyboard HP tidak tertutup.
+      renderJamakContainer();
+    });
+    wordInput.addEventListener("blur", ()=>{
+      if(!formState.arti.trim() && formState.wort.trim()) autoTranslate();
+    });
+  }
+  if(artiInput){
+    artiInput.addEventListener("input", e=>{ formState.arti = e.target.value; });
+    artiInput.addEventListener("keydown", e=>{ if(e.key==="Enter") saveWord(); });
+  }
+  const translateBtn = document.getElementById("translate-btn");
+  if(translateBtn) translateBtn.addEventListener("click", autoTranslate);
+
+  const saveBtn = document.getElementById("save-word-btn");
+  if(saveBtn) saveBtn.addEventListener("click", saveWord);
+  const cancelEditBtn = document.getElementById("cancel-edit-btn");
+  if(cancelEditBtn) cancelEditBtn.addEventListener("click", ()=>{ resetForm(); renderKelola(); });
+
+  const confirmDupBtn = document.getElementById("confirm-dup-btn");
+  if(confirmDupBtn) confirmDupBtn.addEventListener("click", ()=>{ duplicateConfirmed = true; saveWord(); });
+  const cancelDupBtn = document.getElementById("cancel-dup-btn");
+  if(cancelDupBtn) cancelDupBtn.addEventListener("click", ()=>{ duplicateInfo = null; duplicateConfirmed = false; renderKelola(); });
+
+  wrap.querySelectorAll("[data-editword]").forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      const cat = data.categories.find(c=>c.id===selectedCatId);
+      const w = cat ? cat.words.find(w=>w.id===btn.dataset.editword) : null;
+      if(!w) return;
+      editingWordId = w.id;
+      formState = {artikel:w.artikel, wort:w.wort, arti:w.arti, jamak:w.jamak||"", jenis:w.jenis==="verb"?"verb":"nomen"};
+      artikelTouched = true;
+      jamakTouched = true;
+      duplicateInfo = null; duplicateConfirmed = false;
+      renderKelola();
+    });
+  });
+  wrap.querySelectorAll("[data-delword]").forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      const cat = data.categories.find(c=>c.id===selectedCatId);
+      if(!cat) return;
+      cat.words = cat.words.filter(w=>w.id!==btn.dataset.delword);
+      if(editingWordId===btn.dataset.delword) resetForm();
+      persist(); renderKelola();
+    });
+  });
+
+  function saveWord(){
+    const cat = data.categories.find(c=>c.id===selectedCatId);
+    if(!cat) return;
+    const wordInputEl = document.getElementById("word-input");
+    const artiInputEl = document.getElementById("arti-input");
+    const wort = (wordInputEl ? wordInputEl.value : formState.wort || "").trim();
+    const arti = (artiInputEl ? artiInputEl.value : formState.arti || "").trim();
+    if(!wort || !arti) return;
+
+    const jenis = formState.jenis === "verb" ? "verb" : "nomen";
+    // Nomen WAJIB punya artikel yang jelas (der/die/das/kata jamak) sebelum disimpan —
+    // supaya tidak ada kata yang diam-diam kesimpen dengan artikel hasil tebakan yang
+    // belum tentu benar (formState.artikel===null artinya belum dipilih/belum yakin).
+    if(jenis === "nomen" && formState.artikel === null){
+      artikelMissingWarning = true;
+      renderKelola();
+      return;
+    }
+    artikelMissingWarning = false;
+
+    if(!duplicateConfirmed){
+      const dup = findDuplicate(wort);
+      if(dup){ duplicateInfo = dup; renderKelola(); return; }
+    }
+
+    // Verba tidak punya artikel/jamak — dikosongkan biar tidak ada data lama yang nyangkut.
+    const artikel = jenis === "verb" ? "" : formState.artikel;
+    const jamak = jenis === "verb" ? "" : (document.getElementById("jamak-input") ? document.getElementById("jamak-input").value : formState.jamak || "").trim();
+
+    if(editingWordId){
+      const w = cat.words.find(w=>w.id===editingWordId);
+      // Lawan kata & persamaan kata dikelola lewat menu "Lawan/Sinonim" sendiri,
+      // jadi di sini nilainya TIDAK disentuh sama sekali — tetap seperti sebelumnya.
+      if(w){ w.artikel = artikel; w.wort = wort; w.arti = arti; w.jamak = jamak; w.jenis = jenis; }
+    } else {
+      cat.words.push({id:uid("w"), artikel, wort, arti, jamak, jenis, lawan:"", sinonim:""});
+    }
+    resetForm();
+    persist(); renderKelola();
+  }
+}
+
+/* ---------------- MENU BARU: LAWAN KATA & PERSAMAAN KATA ---------------- */
+let sinonimSubTab = "lihat"; // "lihat" | "kelola"
+let sinonimQuery = "";
+let sinonimEditWordId = null;
+
+function renderSinonim(){
+  const wrap = document.getElementById("sinonim-wrap");
+  if(!wrap) return;
+  wrap.innerHTML =
+    '<div class="subtab-bar">'
+    + '<button class="subtab-btn'+(sinonimSubTab==="lihat"?" active":"")+'" data-subtab="lihat">👀 Lihat</button>'
+    + '<button class="subtab-btn'+(sinonimSubTab==="kelola"?" active":"")+'" data-subtab="kelola">⚙️ Kelola</button>'
+    + '</div>'
+    + '<div id="sinonim-content"></div>';
+
+  wrap.querySelectorAll("[data-subtab]").forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      sinonimSubTab = btn.dataset.subtab === "kelola" ? "kelola" : "lihat";
+      renderSinonim();
+    });
+  });
+
+  if(sinonimSubTab==="kelola") renderSinonimKelola();
+  else renderSinonimLihat();
+}
+
+/* -- sub-menu Lihat: daftar kata yang sudah punya lawan kata / persamaan kata -- */
+function renderSinonimLihat(){
+  const content = document.getElementById("sinonim-content");
+  if(!content) return;
+  // Kotak cari dibuat sekali, tidak ikut dibangun ulang tiap ketikan — sama seperti
+  // di menu Kamus — supaya keyboard HP tidak tertutup saat mengetik.
+  content.innerHTML = '<input id="sinonim-search" placeholder="Cari kata, lawan, atau persamaan katanya…" value="'+esc(sinonimQuery)+'" />'
+    + '<div id="sinonim-lihat-results" style="margin-top:12px;"></div>';
+  const search = document.getElementById("sinonim-search");
+  if(search){
+    search.addEventListener("input", e=>{ sinonimQuery = e.target.value; renderSinonimLihatResults(); });
+  }
+  renderSinonimLihatResults();
+}
+
+function renderSinonimLihatResults(){
+  const results = document.getElementById("sinonim-lihat-results");
+  if(!results) return;
+  const filled = allWords().filter(w => (w.lawan && w.lawan.trim()) || (w.sinonim && w.sinonim.trim()));
+  if(filled.length===0){
+    results.innerHTML = '<div class="empty-state">Belum ada kata yang punya lawan kata atau persamaan kata. Tambahkan lewat tab "⚙️ Kelola" di menu ini.</div>';
+    return;
+  }
+  const q = sinonimQuery.trim().toLowerCase();
+  const shown = sortWords(filled.filter(w =>
+    !q || w.wort.toLowerCase().includes(q) || (w.lawan||"").toLowerCase().includes(q) || (w.sinonim||"").toLowerCase().includes(q)
+  ));
+  if(shown.length===0){
+    results.innerHTML = '<div class="empty-state">Tidak ada hasil untuk "'+esc(sinonimQuery)+'".</div>';
+    return;
+  }
+  let html = "";
+  shown.forEach(w=>{
+    const tag = wordTag(w);
+    html += '<div class="sinonim-card">';
+    html += '<div class="sinonim-card-head"><span class="tag '+tag.cls+'">'+tag.label+'</span><span class="word-de">'+esc(w.wort)+'</span><span class="sinonim-card-cat">'+esc(w.catName)+'</span></div>';
+    if(w.lawan && w.lawan.trim()) html += '<div class="sinonim-line">↔️ Lawan kata: <b>'+esc(w.lawan.trim())+'</b></div>';
+    if(w.sinonim && w.sinonim.trim()) html += '<div class="sinonim-line">≈ Persamaan kata: <b>'+esc(w.sinonim.trim())+'</b></div>';
+    html += '</div>';
+  });
+  results.innerHTML = html;
+}
+
+/* -- sub-menu Kelola: pilih kata, lalu isi/ubah lawan & persamaan katanya -- */
+function renderSinonimKelola(){
+  const content = document.getElementById("sinonim-content");
+  if(!content) return;
+  if(allWords().length===0){
+    content.innerHTML = '<div class="empty-state">Belum ada kata sama sekali. Tambahkan kata dulu lewat menu "⚙️ Kelola" utama.</div>';
+    return;
+  }
+  content.innerHTML = '<input id="sinonim-pick-search" placeholder="Cari kata yang mau ditambah lawan/persamaan katanya…" value="'+esc(sinonimQuery)+'" />'
+    + '<div id="sinonim-pick-results" style="margin-top:10px;"></div>'
+    + '<div id="sinonim-edit-area"></div>';
+  const search = document.getElementById("sinonim-pick-search");
+  if(search){
+    search.addEventListener("input", e=>{ sinonimQuery = e.target.value; renderSinonimPickResults(); });
+  }
+  renderSinonimPickResults();
+  renderSinonimEditArea();
+}
+
+function renderSinonimPickResults(){
+  const results = document.getElementById("sinonim-pick-results");
+  if(!results) return;
+  const q = sinonimQuery.trim().toLowerCase();
+  const words = sortWords(allWords().filter(w =>
+    !q || w.wort.toLowerCase().includes(q) || w.catName.toLowerCase().includes(q)
+  ));
+  if(words.length===0){
+    results.innerHTML = '<div class="empty-row">Tidak ada kata ditemukan.</div>';
+    return;
+  }
+  const LIMIT = 40;
+  let html = '<div class="sinonim-pick-list">';
+  words.slice(0, LIMIT).forEach(w=>{
+    const tag = wordTag(w);
+    const active = sinonimEditWordId===w.id;
+    const hasIsi = (w.lawan && w.lawan.trim()) || (w.sinonim && w.sinonim.trim());
+    html += '<button class="sinonim-pick-btn'+(active?" active":"")+'" data-pick="'+w.id+'">'
+      + '<span class="tag '+tag.cls+'">'+tag.label+'</span> '+esc(w.wort)
+      + (hasIsi ? ' <span style="margin-left:auto;font-size:11px;color:var(--ink-soft);">✓ terisi</span>' : '')
+      + '</button>';
+  });
+  html += '</div>';
+  if(words.length>LIMIT){
+    html += '<div class="field-hint">Menampilkan '+LIMIT+' hasil teratas dari '+words.length+' — perkecil pencarian kalau kata yang dicari belum kelihatan.</div>';
+  }
+  results.innerHTML = html;
+  results.querySelectorAll("[data-pick]").forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      sinonimEditWordId = btn.dataset.pick;
+      renderSinonimPickResults();
+      renderSinonimEditArea();
+    });
+  });
+}
+
+function renderSinonimEditArea(){
+  const area = document.getElementById("sinonim-edit-area");
+  if(!area) return;
+  if(!sinonimEditWordId){ area.innerHTML = ""; return; }
+  const found = findWordById(sinonimEditWordId);
+  if(!found){ sinonimEditWordId = null; area.innerHTML = ""; return; }
+  const {word} = found;
+  const tag = wordTag(word);
+  area.innerHTML =
+    '<div class="sinonim-edit-box">'
+    + '<div class="sinonim-edit-title"><span class="tag '+tag.cls+'">'+tag.label+'</span> '+esc(word.wort)+'</div>'
+    + '<input id="sinonim-lawan-input" placeholder="Lawan kata (opsional), mis. groß ↔ klein" value="'+esc(word.lawan||"")+'" />'
+    + '<input id="sinonim-sinonim-input" placeholder="Persamaan kata (opsional), mis. schön, hübsch" value="'+esc(word.sinonim||"")+'" />'
+    + '<div class="word-form-actions"><button class="btn btn-primary" id="sinonim-save-btn">Simpan</button></div>'
+    + '</div>';
+
+  const save = ()=>{
+    const li = document.getElementById("sinonim-lawan-input");
+    const si = document.getElementById("sinonim-sinonim-input");
+    word.lawan = li ? li.value.trim() : "";
+    word.sinonim = si ? si.value.trim() : "";
+    persist();
+    renderSinonimPickResults();
+  };
+  const saveBtn = document.getElementById("sinonim-save-btn");
+  if(saveBtn) saveBtn.addEventListener("click", save);
+  const li = document.getElementById("sinonim-lawan-input");
+  const si = document.getElementById("sinonim-sinonim-input");
+  if(li) li.addEventListener("keydown", e=>{ if(e.key==="Enter") save(); });
+  if(si) si.addEventListener("keydown", e=>{ if(e.key==="Enter") save(); });
+}
+
+/* ---------------- MENU 3: FLASHCARD ---------------- */
+function allWords(){
+  return data.categories.flatMap(c=>c.words.map(w=>({...w, catName:c.name})));
+}
+function shuffleArray(arr){
+  const a=[...arr];
+  for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; }
+  return a;
+}
+function buildDeck(filter, shuffle){
+  const words = allWords();
+  const src = filter==="all" ? words : words.filter(w=>w.catName===filter);
+  return shuffle ? shuffleArray(src) : src;
+}
+
+function renderFlashcard(){
+  const wrap = document.getElementById("flash-wrap");
+  if(!wrap) return;
+  const words = allWords();
+  if(words.length===0){
+    wrap.innerHTML = '<div class="empty-state">Belum ada kosakata untuk dijadikan flashcard. Tambahkan kata di menu Kelola dulu.</div>';
+    return;
+  }
+
+  let html = '<div class="flash-controls">';
+  html += '<select id="flash-filter">';
+  html += '<option value="all"'+(flashFilter==="all"?" selected":"")+'>Semua tema ('+words.length+')</option>';
+  data.categories.forEach(c=>{
+    html += '<option value="'+esc(c.name)+'"'+(flashFilter===c.name?" selected":"")+'>'+esc(c.name)+' ('+c.words.length+')</option>';
+  });
+  html += '</select>';
+  html += '<button class="btn btn-ghost" id="reshuffle-btn">🔀 Acak ulang</button></div>';
+
+  const current = flashDeck[flashIndex];
+  if(!current){
+    html += '<div class="empty-state">Tidak ada kata pada tema ini.</div>';
+    wrap.innerHTML = html;
+    attachFlashHandlers();
+    return;
+  }
+
+  html += '<div class="flash-counter">Kartu '+(flashIndex+1)+' dari '+flashDeck.length+' · '+esc(current.catName)+'</div>';
+  html += '<div class="flash-stage" id="flash-stage">';
+  html += '<div class="flash-card '+(flashFlipped?"flipped":"")+'" id="flash-card">';
+  const a = wordTag(current);
+  html += '<div class="flash-face"><span class="tag '+a.cls+'">'+a.label+'</span>';
+  html += '<div class="flash-word">'+esc(current.wort)+'</div><div class="flash-hint">ketuk untuk lihat arti</div></div>';
+  html += '<div class="flash-face flash-face-back"><div class="flash-word">'+esc(current.arti)+'</div><div class="flash-hint">ketuk untuk kembali</div></div>';
+  html += '</div></div>';
+  html += '<div class="flash-nav"><button class="nav-btn" id="flash-prev">‹</button><button class="nav-btn" id="flash-flip">⟳</button><button class="nav-btn" id="flash-next">›</button></div>';
+
+  wrap.innerHTML = html;
+  attachFlashHandlers();
+}
+
+function attachFlashHandlers(){
+  const wrap = document.getElementById("flash-wrap");
+  if(!wrap) return;
+  const filterSel = document.getElementById("flash-filter");
+  if(filterSel) filterSel.addEventListener("change", e=>{
+    flashFilter = e.target.value;
+    flashDeck = buildDeck(flashFilter, true);
+    flashIndex = 0; flashFlipped = false;
+    renderFlashcard();
+  });
+  const reshuffleBtn = document.getElementById("reshuffle-btn");
+  if(reshuffleBtn) reshuffleBtn.addEventListener("click", ()=>{
+    flashDeck = shuffleArray(flashDeck); flashIndex=0; flashFlipped=false; renderFlashcard();
+  });
+  const stage = document.getElementById("flash-stage");
+  if(stage) stage.addEventListener("click", ()=>{ flashFlipped = !flashFlipped; renderFlashcard(); });
+  const prev = document.getElementById("flash-prev");
+  if(prev) prev.addEventListener("click", e=>{ e.stopPropagation(); flashFlipped=false; flashIndex = flashIndex-1>=0 ? flashIndex-1 : flashDeck.length-1; renderFlashcard(); });
+  const next = document.getElementById("flash-next");
+  if(next) next.addEventListener("click", e=>{ e.stopPropagation(); flashFlipped=false; flashIndex = flashIndex+1<flashDeck.length ? flashIndex+1 : 0; renderFlashcard(); });
+  const flip = document.getElementById("flash-flip");
+  if(flip) flip.addEventListener("click", e=>{ e.stopPropagation(); flashFlipped=!flashFlipped; renderFlashcard(); });
+}
+
+/* ---------------- INIT ---------------- */
+renderHeader();
+renderKamus();
+</script>
+</body>
+</html>
